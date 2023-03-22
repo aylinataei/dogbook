@@ -1,11 +1,13 @@
 *{
-  background-color: rgb(243, 234, 222);
+  background-color: white;
 }
 h1{
- background-color: rgb(205, 190, 171);
+ color: rgb(116, 144, 173) ;
+ 
  text-align: center;
 font-family: var(--bs-body-font-family);
 height: 60px;
+
 }
 
 form{
@@ -26,44 +28,41 @@ form{
 .h3{
   padding-top: 50px;
   text-align: center;
-  color: burlywood;
+  color: rgb(125, 117, 106);
+}
+.firstpage{
+  padding-top: 50px;
+  padding-left: 40%;
+  
 }
 
-/* .App {
-  text-align: center;
+.delete-button{
+  margin-left: 15px;
+  /* margin-left: 100px;
+  margin-bottom:100px;
+  margin-top: 100px; */
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button{
+ 
+  background-color: aquamarine;
+  width: 200px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.viewDog{
+  padding-top: 50px;
+    padding-left: 30%;
+     text-align: left;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.edit{
+    margin-top: 1px;
+    
 }
-
-.App-link {
-  color: #61dafb;
+.bild{
+  width: 300px;
+  height: 200px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+p1{
+  color: green;
+ 
+  
+}
