@@ -34,13 +34,15 @@ const EditDog = ({ setView, dog, setDog, dogs }) => {
     }
   }, [selectedFriend, friends]);
 
-
   const addFriend = (friendId) => {
-    const foundDog = dogs.find((dog) => dog.id === friendId);
-    if (foundDog) {
-      setFriends([...friends, foundDog]);
+    if (friendId !== id) {
+      const foundDog = dogs.find((dog) => dog.id === friendId);
+      if (foundDog) {
+        setFriends([...friends, foundDog]);
+      }
     }
   };
+
 
 
   return (
@@ -68,7 +70,7 @@ const EditDog = ({ setView, dog, setDog, dogs }) => {
           <select onChange={(e) => addFriend(e.target.value)}>
             <option value="">Add friend</option>
             {dogs
-              .filter((dog) => !friends.some((friend) => friend.id === dog.id))
+              .filter((dog) => !friends.some((friend) => friend.id === dog.id) && dog.id !== id)
               .map((dog) => (
                 <option key={dog.id} value={dog.id}>
                   {dog.name}

@@ -4,10 +4,19 @@ const Dogs = ({ setView, dogs, setDog, setDogs }) => {
     setDog(dog)
     setView("DOG")
   }
-  const deleteHandler = async (id) => {
-    setDogs(dogs.filter(d => d.id !== id))
 
+  const deleteHandler = async (id) => {
+    setDogs(dogs.filter(d => d.id !== id));
+
+    setDogs(prevDogs => {
+      return prevDogs.map(d => {
+        if (d.id === id) return d;
+        const updatedFriends = d.friends.filter(f => f.id !== id);
+        return { ...d, friends: updatedFriends };
+      });
+    });
   }
+
 
 
   return (
